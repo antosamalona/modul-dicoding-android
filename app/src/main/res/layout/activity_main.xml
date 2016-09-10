@@ -10,49 +10,24 @@
     android:orientation="vertical"
     tools:context="id.my.badwi.hitungluas.MainActivity">
 
-    <TextView
+    <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Panjang"
-        android:id="@+id/textView"
-        android:layout_marginBottom="8dp" />
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/edt_panjang"
-        android:hint="0"
-        android:inputType="numberDecimal"
-        android:layout_marginBottom="8dp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Lebar"
-        android:id="@+id/textView2" />
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/edt_lebar"
-        android:hint="0"
-        android:inputType="numberDecimal"
-        android:layout_marginBottom="8dp" />
+        android:text="Ke Activity Sub 1"
+        android:id="@+id/btn_activity_sub_1"
+        android:layout_gravity="center_horizontal" />
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hitung"
-        android:id="@+id/btn_hitung"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginBottom="8dp" />
+        android:text="Ke Activity Sub 2"
+        android:id="@+id/btn_activity_sub_2"
+        android:layout_gravity="center_horizontal" />
 
-    <TextView
+    <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hasil"
-        android:id="@+id/txt_luas"
-        android:layout_marginBottom="8dp"
-        android:textSize="18sp"
-        android:textStyle="bold" />
+        android:text="Ke Activity Sub 3"
+        android:id="@+id/btn_activity_sub_3"
+        android:layout_gravity="center_horizontal" />
 </LinearLayout>
