@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        if(getSupportActionBar() != null)
         getSupportActionBar().setTitle("Sample Intent");
 
         btnSub1 = (Button)findViewById(R.id.btn_activity_sub_1);
@@ -50,48 +51,10 @@ public class MainActivity extends AppCompatActivity {
         btnDial.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:082121212093"));
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://badwi.my.id"));
                 startActivity(intent);
             }
         });
-//        edtPanjang = (EditText)findViewById(R.id.edt_panjang);
-//        edtLebar = (EditText)findViewById(R.id.edt_lebar);
-//        btnHitung = (Button)findViewById(R.id.btn_hitung);
-//        txtLuas = (TextView)findViewById(R.id.txt_luas);
-//
-//        btnHitung.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                String panjang = edtPanjang.getText().toString().trim();
-//                String lebar = edtLebar.getText().toString().trim();
 
-//                if (edtPanjang.getText().toString().length() == 0 ||
-//                        edtLebar.getText().toString().length() == 0) {
-//                    Toast.makeText(, "Owowow ada yang kosong bro",
-//                            Toast.LENGTH_SHORT).show();
-////                    edtPanjang.setError("Jangan dikosongin bro, plis");
-//                    return;
-//                }
-//
-//                else
-//
-//                {
-//                try {
-//                    double p = Double.parseDouble(panjang);
-//                    double l = Double.parseDouble(lebar);
-//
-//                    double luas = p * l;
-//
-//                    txtLuas.setText("Luas: " + luas);
-//                }
-//                catch (NumberFormatException e) {
-//
-//                    Toast.makeText(MainActivity.this, e.getMessage(), Toast.LENGTH_SHORT).show();
-//                    txtLuas.setText("Luas: NOL");
-//                }
-//
-////                }
-//            }
-//        });
     }
 }
