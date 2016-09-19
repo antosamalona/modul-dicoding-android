@@ -1,60 +1,46 @@
 package id.my.badwi.hitungluas;
 
-import android.content.Intent;
-import android.net.Uri;
+import android.support.design.widget.TabLayout;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-//import android.text.TextUtils;
-//import android.view.View;
-import android.view.View;
-import android.widget.Button;
-//import android.widget.EditText;
-//import android.widget.TextView;
-//import android.widget.Toast;
+import android.support.v7.widget.Toolbar;
+import id.my.badwi.hitungluas.adapter.TabFragmentPagerAdapter;
+
 
 public class MainActivity extends AppCompatActivity {
 
-//    private EditText edtPanjang, edtLebar;
-//    private Button btnHitung;
-//    private TextView txtLuas;
-    private Button btnSub1, btnSub2, btnDial;
+
+    private ViewPager pager;
+    private TabLayout tabs;
+    private Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        if(getSupportActionBar() != null)
-        getSupportActionBar().setTitle("Sample Intent");
+        toolbar = (Toolbar)findViewById(R.id.tool_bar);
 
-        btnSub1 = (Button)findViewById(R.id.btn_activity_sub_1);
-        btnSub2 = (Button)findViewById(R.id.btn_activity_sub_2);
-        btnDial = (Button)findViewById(R.id.btn_activity_sub_3);
+//        if(getSupportActionBar() != null) {
+        if (toolbar != null) {
+            setSupportActionBar(toolbar);
+            getSupportActionBar().setTitle("Material Tab");
+        }
+//        }
 
-        btnSub1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, Sub1Activity.class);
-                startActivity(intent);
-            }
-        });
+        //inisialisasi tab dan pager
+        pager = (ViewPager)findViewById(R.id.pager);
+        tabs = (TabLayout)findViewById(R.id.tabs);
 
-        btnSub2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, Sub2Activity.class);
-                intent.putExtra(Sub2Activity.KEY_DATA, "Training Aplikasi Android");
-                startActivityForResult(intent, 0);
-            }
-        });
+        pager.setAdapter(new TabFragmentPagerAdapter(getSupportFragmentManager()));
 
-        btnDial.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://badwi.my.id"));
-                startActivity(intent);
-            }
-        });
+        tabs.setTabTextColors(getResources().getColor(R.color.colorPrimaryDark),
+                getResources().getColor(R.color.white));
+
+        tabs.setupWithViewPager(pager);
+
+        tabs.setTabGravity(TabLayout.GRAVITY_FILL);
 
     }
 }
