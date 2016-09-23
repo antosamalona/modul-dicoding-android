@@ -2,24 +2,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="id.my.badwi.hitungluas.fragment.Tab2Fragment">
+    tools:context="id.my.badwi.hitungluas.samplefragment.FirstFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:layout_width="wrap_content"
+        android:id="@+id/txt_first_fragment"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/tab_2"
-        android:id="@+id/txt_content_tab_2"
+        android:text="@string/fragment_first"
+        android:layout_marginBottom="8dp"
+        android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true" />
-
+        android:gravity="center" />
     <Button
-        android:id="@+id/btn_click_me"
+        android:id="@+id/btn_first_fragment"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Klik Saya"
-        android:layout_below="@+id/txt_content_tab_2"
+        android:text="@string/fragment_first_btn"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"/>
+        android:layout_below="@id/txt_first_fragment"/>
 
 </RelativeLayout>

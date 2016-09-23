@@ -2,14 +2,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="id.my.badwi.hitungluas.fragment.Tab1Fragment">
+    tools:context="id.my.badwi.hitungluas.samplefragment.ThirdFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/tab_1"
+        android:text="@string/fragment_third"
+        android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
+        android:gravity="center" />
 
 </RelativeLayout>

@@ -1,11 +1,15 @@
 <resources>
-    <string name="app_name">SampleTabApplication</string>
+    <string name="app_name">SampleFragmentUsage</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="hello_world">Hello World!</string>
-    <string name="action_settings">Settings</string>
 
-    <string name="tab_1">Kamu ada di tab 1</string>
-    <string name="tab_2">Kamu ada di tab 2</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="fragment_first">Hai, inilah first fragment</string>
+    <string name="fragment_first_btn">Ke SecondFragment</string>
+    <string name="fragment_second">Konnichiwa, yang ini second fragment</string>
+    <string name="fragment_secont_btn">Ke ThirdFragment</string>
+    <string name="fragment_third">Hai, ini third fragment</string>
+
+
 </resources>
